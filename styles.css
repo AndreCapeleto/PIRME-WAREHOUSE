@@ -1,0 +1,189 @@
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #4cc9f0;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilos para os controles */
+.controls {
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilos para a seção de operadores */
+#operadoresContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.operador {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.operador img {
+    border-radius: 20%;
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: bold; /* Negrito */
+}
+
+.info p {
+    font-size: 14px;
+    margin: 5px 0;
+    font-weight: bold; /* Negrito */
+}
+
+/* Botão de editar */
+.edit-btn, .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 180px;
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    right: 5px; /* Ajusta a posição do botão de excluir */
+    background-color: #d9534f;
+}
+
+.edit-btn:hover {
+    background-color: #ec971f;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para o formulário */
+.modal-content form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal-content form input[type="text"],
+.modal-content form select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-content form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.modal-content form button {
+    background-color: #4cc9f0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.modal-content form button:hover {
+    background-color: #3995c4;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #4cc9f0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+/* Estilos para o rodapé */
+footer {
+    background-color: #4cc9f0;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}

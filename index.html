@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME WAREHOUSE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PRIME WAREHOUSE: People Resource Integrated Management Engine</h1>
+        <button id="cadastrarBtn">Cadastrar Operador</button>
+    </header>
+
+    <div>
+        <label for="turnoSelect">Filtro por Turno:</label>
+        <select id="turnoSelect">
+            <option value="todos">Todos</option>
+            <option value="1° Turno">1° Turno</option>
+            <option value="2° Turno">2° Turno</option>
+            <option value="3° Turno">3° Turno</option>
+        </select>
+
+        <label for="areaSelect">Filtro por Área:</label>
+        <select id="areaSelect">
+            <option value="todas">Todas</option>
+            <option value="Recebimento">Recebimento</option>
+            <option value="Abastecimento">Abastecimento</option>
+            <option value="Supermercado SMT">Supermercado SMT</option>
+	    <option value="Service Center">Service Center</option>
+            <!-- Adicione mais áreas conforme necessário -->
+        </select>
+
+        <label for="atividadeSelect">Filtro por Atividade:</label>
+        <select id="atividadeSelect">
+            <option value="todas">Todas</option>
+             <option value="Empilhadeira">Empilhadeira</option>
+             <option value="Recebimento">Recebimento</option>
+             <option value="SPMKT FE">SPMKT FE</option>
+             <option value="CFC">CFC</option>
+             <option value="Lowbay">Lowbay</option>
+             <option value="Conferencia">Conferencia</option>
+             <option value="Banana Pelling">Banana Pelling</option>
+             <option value="Preparação">Preparação</option>
+             <option value="EMS">EMS</option>
+             <option value="Operador 2">Operador 2</option>
+        </select>
+
+        <!-- Input para carregar lista de operadores -->
+        <input type="file" id="arquivoInput" accept=".xlsx" />
+    </div>
+
+    <div id="operadoresContainer"></div>
+
+    <!-- Modal para cadastrar e editar operador -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Cadastrar Operador</h2>
+            <form id="cadastrarForm">
+                <input type="hidden" id="operadorIndex" value="">
+                
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                
+                <label for="turno">Turno:</label>
+                <select id="turno">
+                    <option value="1° Turno">1° Turno</option>
+                    <option value="2° Turno">2° Turno</option>
+                    <option value="3° Turno">3° Turno</option>
+                </select>
+
+                <label for="area">Área:</label>
+                <select id="area">
+                    <option value="Recebimento">Recebimento</option>
+                    <option value="Abastecimento">Abastecimento</option>
+                    <option value="Supermercado_SMT">Supermercado_SMT</option>
+		    <option value="Service Center">Service Center</option>
+                    <!-- Adicione mais áreas conforme necessário -->
+                </select>
+
+                <label for="atividade">Atividade:</label>
+                <select id="atividade">
+                    <option value="Empilhadeira">Empilhadeira</option>
+                    <option value="Recebimento">Recebimento</option>
+                    <option value="SPMKT FE">SPMKT FE</option>
+                    <option value="CFC">CFC</option>
+                    <option value="Lowbay">Lowbay</option>
+                    <option value="Conferencia">Conferencia</option>
+                    <option value="Banana Pelling">Banana Pelling</option>
+                    <option value="Preparação">Preparação</option>
+		    <option value="EMS">EMS</option>
+		    <option value="Operador 2">Operador 2</option>
+                </select>
+
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" required>
+
+                <label for="lider">Líder:</label>
+                <input type="text" id="lider" required>
+
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" accept="image/*">
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+<footer>
+    <p>2024 Process Team Warehouse</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
